@@ -1,6 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+  Route,
+} from "react-router-dom";
 import Root, {
   loader as rootLoader,
   action as rootAction,
@@ -39,10 +44,7 @@ const router = createBrowserRouter(
           loader={contactLoader}
           action={editAction}
         />
-        <Route
-          path="contacts/:contactId/destroy"
-          action={destroyAction}
-        />
+        <Route path="contacts/:contactId/destroy" action={destroyAction} />
       </Route>
     </Route>
   )
